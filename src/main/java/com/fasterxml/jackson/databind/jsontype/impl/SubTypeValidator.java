@@ -233,6 +233,12 @@ public class SubTypeValidator
         // [databind#3003]: another case of embedded Xalan (derivative of #2469)
         s.add("org.docx4j.org.apache.xalan.lib.sql.JNDIConnectionPool");
 
+        // [databind#2097]: some 3rd party, one JDK-bundled
+        s.add("org.slf4j.ext.EventData");
+        s.add("flex.messaging.util.concurrent.AsynchBeansWorkManagerExecutor");
+        s.add("com.sun.deploy.security.ruleset.DRSHelper");
+        s.add("org.apache.axis2.jaxws.spi.handler.HandlerResolverImpl");
+
         DEFAULT_NO_DESER_CLASS_NAMES = Collections.unmodifiableSet(s);
     }
 
